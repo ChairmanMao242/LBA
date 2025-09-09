@@ -1,0 +1,11 @@
+{
+  "name": "lba-html5-scss-project",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass src/styles.scss src/styles.css --no-source-map --style=expanded",
+    "watch": "sass --watch src/styles.scss:src/styles.css --no-source-map --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
