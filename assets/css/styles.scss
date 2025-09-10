@@ -1,5 +1,44 @@
 @use "reset";
-@use "fonts/fonts";
+@use "fonts";
+
+@mixin btn() {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  background-color: #cecb9d;
+  font-size: 20px;
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1f1f3c;
+  text-align: center;
+  border-radius: 24px;
+  margin: 0 auto;
+  height: 32px;
+  line-height: 32px;
+
+  @media (min-width: 540px) {
+    width: 320px;
+  }
+
+  @media (min-width: 768px) {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 48px;
+    line-height: 48px;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    transform: none;
+  }
+}
 
 body,
 html {
@@ -17,37 +56,648 @@ html,
   }
 }
 
+.header {
+  position: absolute;
+  top: 320px;
+  margin: 0 auto;
+  width: 100%;
+  transition: 0.5s ease-out width;
+
+  @media (min-width: 768px) {
+    top: 230px;
+  }
+
+  @media (min-width: 1200px) {
+    top: 170px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 268px;
+
+    @media (min-width: 768px) {
+      width: 320px;
+    }
+  }
+
+  &__logo {
+    &--sticky {
+      // darken the gradient
+      background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+      text-align: center;
+      position: fixed;
+      top: -200px;
+      opacity: 0;
+      width: 100%;
+      transition:
+        0.5s ease-out top,
+        0.5s ease-out opacity;
+
+      .sticky-header & {
+        top: 0px;
+        opacity: 1;
+      }
+
+      img {
+        width: 130px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}
+
 .hero {
-  background: url("../img/hero.jpg") no-repeat top center/cover;
+  background-image: url("../img/hero.jpg");
+  background-size: 1400px auto;
+  background-repeat: no-repeat;
+  background-position: top center;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &__logo {
-    width: 156px;
-    height: auto;
-    display: block;
-    margin: 330px auto 50px;
+  @media (min-width: 1400px) {
+    background-size: cover;
+  }
+
+  &__title {
+    max-width: 260px;
+    margin: 0 auto 25px;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 48px;
+    line-height: 1.2em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 475px;
+
     @media (min-width: 768px) {
-      margin: 250px auto 100px;
+      max-width: 100%;
+      margin-top: 360px;
     }
+
+    @media (min-width: 1200px) {
+      font-size: 98px;
+      margin-top: 400px;
+    }
+  }
+
+  &__text {
+    max-width: 100%;
+    margin: 0 auto 20px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+
+    p {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+}
+.hero,
+.form {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  &__content {
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+      width: 580px;
+    }
+    @media (min-width: 1200px) {
+      width: 800px;
+    }
+  }
+
+  &__form {
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      max-width: 485px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 664px;
+    }
+  }
+}
+
+.form {
+  margin: 58px auto;
+
+  @media (min-width: 1200px) {
+    margin: 80px auto;
   }
 
   &__title {
     font-family: "Big Shoulders Display", sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1.2em;
-    margin-bottom: 1em;
     color: white;
+    margin-bottom: 16px;
     text-align: center;
   }
 
   &__text {
     font-size: 18px;
+    line-height: 1em;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.piani {
+  &__container {
+    width: 1440px;
+    max-width: 100%;
+    margin: 60px auto 0;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @media (min-width: 1200px) {
+      padding-left: 56px;
+      padding-right: 56px;
+      margin: 80px auto 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+
+    @media (min-width: 768px) {
+      margin: 40px auto;
+    }
+
+    a {
+      color: #cecb9d;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  }
+
+  &__cta {
+    text-align: center;
+  }
+
+  &__btn {
+    @include btn;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__title {
+    display: none;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-align: center;
+    color: white;
+
+    @media (min-width: 768px) {
+      display: block;
+      font-size: 40px;
+      padding: 0 0 40px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
+  }
+}
+
+.card {
+  background-color: #000014;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 32px 24px;
+
+  &__title {
+    color: white;
+    font-size: 20px;
+    line-height: 1.2em;
+    font-weight: bold;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    color: #cecb9d;
+    font-size: 24px;
+    line-height: 1.2em;
+    font-weight: bold;
+    font-family: "Big Shoulders Display", sans-serif;
+  }
+
+  &__frequency,
+  &__description {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__description {
+    margin: 25px 0 0;
+  }
+}
+
+.features {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__title,
+  &__list {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5em;
+
+    @media (min-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin: 10px 0;
+
+    li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      line-height: 1.5em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      svg {
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+      }
+    }
+  }
+
+  &__tag {
+    font-size: 16px;
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #af521e;
+    color: white;
+    padding: 5px 10px;
+    margin-top: auto;
+  }
+}
+
+.about,
+.devices {
+  margin-top: 56px;
+
+  @media (min-width: 1200px) {
+    margin-top: 104px;
+  }
+
+  &__title {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 32px;
+    line-height: 1.2em;
     color: white;
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
     @media (min-width: 768px) {
-      margin: 250px auto 100px;
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 30px;
     }
+
+    @media (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    p,
+    ul {
+      font-size: 14px;
+      line-height: 1.5em;
+      color: white;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 20px;
+        line-height: 1em;
+      }
+    }
+
+    p {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__container {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media (min-width: 768px) {
+      padding: 0 76px;
+    }
+  }
+
+  &__cols {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__image {
+    text-align: center;
+    margin: 0 auto 30px;
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1200px) {
+      flex: 0 0 560px;
+      margin: 0;
+
+      img {
+        width: 120%;
+        max-width: 120%;
+      }
+    }
+  }
+
+  &__content {
+    order: 2;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+      max-width: calc(100% - 560px);
+      flex: 1;
+      order: inherit;
+    }
+  }
+
+  &__logos {
+    margin: 30px auto 0;
+    max-width: 100%;
+    width: 360px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.about {
+  &__content {
+    @media (min-width: 1200px) {
+      padding-left: 40px;
+    }
+  }
+
+  &__image {
+    @media (min-width: 1200px) {
+      img {
+        margin-left: -20%;
+      }
+    }
+  }
+}
+
+.devices {
+  &__content {
+    @media (min-width: 1200px) {
+      padding-right: 40px;
+    }
+  }
+
+  &__image {
+    @media (min-width: 1200px) {
+      img {
+        margin-right: -20%;
+      }
+    }
+  }
+
+  &__title {
+    @media (min-width: 1200px) {
+      width: 550px;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: 1200px) {
+      column-count: 2;
+      column-gap: 40px;
+    }
+  }
+
+  &__btn {
+    @include btn;
+    & {
+      margin-top: 30px;
+    }
+  }
+}
+
+.faqs {
+  margin-top: 80px;
+
+  @media (min-width: 1200px) {
+    margin-top: 104px;
+  }
+
+  &__container {
+    width: 1120px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
+  }
+
+  &__title {
+    font-family: "Big Shoulders Display", sans-serif;
+    color: white;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+    }
+
+    @media (min-width: 1200px) {
+    }
+  }
+
+  &__accordion {
+    border-bottom: 1px solid #444;
+  }
+
+  &__item {
+    padding: 30px 0;
+    border-top: 1px solid #444;
+  }
+
+  &__question {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    padding-right: 40px;
+
+    /* Remove default marker */
+    list-style: none;
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:after {
+      content: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_84_6774)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 6.28862L2.48239 4.30273L8.5 10.331L14.5176 4.30273L16.5 6.28862L8.5 14.3027L0.5 6.28862Z" fill="white"/></g><defs><clipPath id="clip0_84_6774"><rect width="16" height="16" fill="white" transform="matrix(1 0 0 -1 .5 16.9688)"/></clipPath></defs></svg>');
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      right: 11.5px;
+      top: 50%;
+      margin-top: -8px;
+      line-height: 16px;
+    }
+  }
+
+  details[open] {
+    summary {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__answer {
+    font-size: 20px;
+    color: white;
+    line-height: 1em;
+    padding-top: 15px;
+  }
+}
+
+.footer {
+  padding: 0 24px;
+
+  @media (min-width: 768px) {
+    padding: 0 54px;
+  }
+
+  &__container {
+    padding: 24px 0;
+    border-top: 1px solid #718096;
+  }
+
+  &__logo {
+    img {
+      width: 126px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  &__links a,
+  &__copyright {
+    font-size: 14px;
+    color: #cecb9d;
+    text-decoration: none;
+  }
+
+  &__links a {
+    padding: 0 25px;
   }
 }
