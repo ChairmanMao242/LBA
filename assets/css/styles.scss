@@ -68,17 +68,20 @@ html,
   }
 
   @media (min-width: 1200px) {
-    top: 170px;
+    top: 380px;
   }
 
   img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    width: 268px;
+    width: 300px;
 
     @media (min-width: 768px) {
-      width: 320px;
+      width: 360px;
+    }
+    @media (min-width: 1200px) {
+      width: 500px;
     }
   }
 
@@ -132,11 +135,11 @@ html,
     color: white;
     text-align: center;
     text-transform: uppercase;
-    margin-top: 475px;
+    margin-top: 360px;
 
     @media (min-width: 768px) {
       max-width: 100%;
-      margin-top: 360px;
+      margin-top: 270px;
     }
 
     @media (min-width: 1200px) {
@@ -165,6 +168,7 @@ html,
     }
   }
 }
+
 .hero,
 .form {
   padding-left: 24px;
