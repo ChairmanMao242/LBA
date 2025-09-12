@@ -211,6 +211,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-image: url("../img/hero.jpg");
@@ -249,6 +250,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
 }
 
 section {
