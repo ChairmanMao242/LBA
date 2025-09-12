@@ -211,7 +211,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  aspect-ratio: 16/9;
   width: 100%;
   overflow: hidden;
   background-image: url("../img/hero.jpg");
