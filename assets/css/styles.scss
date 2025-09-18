@@ -16,7 +16,12 @@
   margin: 0 auto;
   height: 32px;
   line-height: 32px;
-
+  font {
+    font-size: 20px;
+    font-family: "Big Shoulders Display", sans-serif;
+    height: 32px;
+    line-height: 32px;
+  }
   @media (min-width: 540px) {
     width: 320px;
   }
@@ -132,7 +137,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     max-width: 260px;
     margin: 0 auto 25px;
     font-family: "Big Shoulders Display", sans-serif;
@@ -161,7 +167,8 @@ main {
     color: white;
     text-align: center;
 
-    p, p font {
+    p,
+    p font {
       margin-bottom: 25px;
 
       &:last-child {
@@ -272,7 +279,8 @@ section {
     margin: 80px auto;
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     font-family: "Big Shoulders Display", sans-serif;
     font-size: 32px;
     line-height: 1.2em;
@@ -349,7 +357,8 @@ section {
     }
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     display: none;
     font-family: "Big Shoulders Display", sans-serif;
     text-align: center;
@@ -373,7 +382,8 @@ section {
   border-radius: 10px;
   padding: 32px 24px;
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     color: white;
     font-size: 20px;
     line-height: 1.2em;
@@ -413,7 +423,8 @@ section {
   flex-direction: column;
   justify-content: flex-start;
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     font-weight: 700;
   }
 
@@ -428,7 +439,8 @@ section {
     }
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     @media (min-width: 768px) {
       font-size: 16px;
     }
@@ -476,7 +488,8 @@ section {
     margin-top: 104px;
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     font-family: "Big Shoulders Display", sans-serif;
     font-size: 32px;
     line-height: 1.2em;
@@ -497,7 +510,8 @@ section {
   }
 
   &__text {
-    p, p font,
+    p,
+    p font,
     ul {
       font-size: 14px;
       line-height: 1.5em;
@@ -513,7 +527,8 @@ section {
       }
     }
 
-    p, p font {
+    p,
+    p font {
       margin-bottom: 1em;
 
       &:last-child {
@@ -622,7 +637,8 @@ section {
     }
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     @media (min-width: 1200px) {
       width: 550px;
     }
@@ -668,7 +684,8 @@ section {
     }
   }
 
-  &__title, &__title font {
+  &__title,
+  &__title font {
     font-family: "Big Shoulders Display", sans-serif;
     color: white;
     font-size: 40px;
@@ -739,7 +756,7 @@ section {
 }
 
 .footer {
-  margin-top:150px;
+  margin-top: 150px;
   padding: 0 24px;
 
   @media (min-width: 768px) {

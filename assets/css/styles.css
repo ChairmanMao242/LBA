@@ -193,10 +193,12 @@ main {
   color: white;
   text-align: center;
 }
-.hero__text p, .hero__text p font {
+.hero__text p,
+.hero__text p font {
   margin-bottom: 25px;
 }
-.hero__text p:last-child, .hero__text p font:last-child {
+.hero__text p:last-child,
+.hero__text p font:last-child {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
@@ -383,6 +385,12 @@ section {
   height: 32px;
   line-height: 32px;
 }
+.piani__btn font {
+  font-size: 20px;
+  font-family: "Big Shoulders Display", sans-serif;
+  height: 32px;
+  line-height: 32px;
+}
 @media (min-width: 540px) {
   .piani__btn {
     width: 320px;
@@ -565,7 +573,8 @@ section {
     text-align: left;
   }
 }
-.about__text p, .about__text p font,
+.about__text p,
+.about__text p font,
 .about__text ul,
 .devices__text p,
 .devices__text p font,
@@ -575,7 +584,8 @@ section {
   color: white;
 }
 @media (min-width: 768px) {
-  .about__text p, .about__text p font,
+  .about__text p,
+  .about__text p font,
   .about__text ul,
   .devices__text p,
   .devices__text p font,
@@ -584,7 +594,8 @@ section {
   }
 }
 @media (min-width: 1200px) {
-  .about__text p, .about__text p font,
+  .about__text p,
+  .about__text p font,
   .about__text ul,
   .devices__text p,
   .devices__text p font,
@@ -593,12 +604,14 @@ section {
     line-height: 1em;
   }
 }
-.about__text p, .about__text p font,
+.about__text p,
+.about__text p font,
 .devices__text p,
 .devices__text p font {
   margin-bottom: 1em;
 }
-.about__text p:last-child, .about__text p font:last-child,
+.about__text p:last-child,
+.about__text p font:last-child,
 .devices__text p:last-child,
 .devices__text p font:last-child {
   margin-bottom: 0;
@@ -732,6 +745,12 @@ section {
   text-align: center;
   border-radius: 24px;
   margin: 0 auto;
+  height: 32px;
+  line-height: 32px;
+}
+.devices__btn font {
+  font-size: 20px;
+  font-family: "Big Shoulders Display", sans-serif;
   height: 32px;
   line-height: 32px;
 }
