@@ -163,7 +163,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.hero__title {
+.hero__title, .hero__title font {
   max-width: 260px;
   margin: 0 auto 25px;
   font-family: "Big Shoulders Display", sans-serif;
@@ -175,13 +175,13 @@ main {
   margin-top: 60px;
 }
 @media (min-width: 768px) {
-  .hero__title {
+  .hero__title, .hero__title font {
     max-width: 100%;
     margin-top: 70px;
   }
 }
 @media (min-width: 1200px) {
-  .hero__title {
+  .hero__title, .hero__title font {
     font-size: 98px;
     margin-top: 100px;
   }
@@ -193,10 +193,10 @@ main {
   color: white;
   text-align: center;
 }
-.hero__text p {
+.hero__text p, .hero__text p font {
   margin-bottom: 25px;
 }
-.hero__text p:last-child {
+.hero__text p:last-child, .hero__text p font:last-child {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
@@ -310,7 +310,7 @@ section {
     margin: 80px auto;
   }
 }
-.form__title {
+.form__title, .form__title font {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 32px;
   line-height: 1.2em;
@@ -420,21 +420,21 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-.piani__title {
+.piani__title, .piani__title font {
   display: none;
   font-family: "Big Shoulders Display", sans-serif;
   text-align: center;
   color: white;
 }
 @media (min-width: 768px) {
-  .piani__title {
+  .piani__title, .piani__title font {
     display: block;
     font-size: 40px;
     padding: 0 0 40px;
   }
 }
 @media (min-width: 1200px) {
-  .piani__title {
+  .piani__title, .piani__title font {
     font-size: 48px;
   }
 }
@@ -445,7 +445,7 @@ section {
   border-radius: 10px;
   padding: 32px 24px;
 }
-.card__title {
+.card__title, .card__title font {
   color: white;
   font-size: 20px;
   line-height: 1.2em;
@@ -481,7 +481,7 @@ section {
   flex-direction: column;
   justify-content: flex-start;
 }
-.features__title {
+.features__title, .features__title font {
   font-weight: 700;
 }
 .features__title, .features__list {
@@ -495,7 +495,7 @@ section {
   }
 }
 @media (min-width: 768px) {
-  .features__title {
+  .features__title, .features__title font {
     font-size: 16px;
   }
 }
@@ -538,8 +538,9 @@ section {
     margin-top: 104px;
   }
 }
-.about__title,
-.devices__title {
+.about__title, .about__title font,
+.devices__title,
+.devices__title font {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 32px;
   line-height: 1.2em;
@@ -549,50 +550,57 @@ section {
   margin-bottom: 25px;
 }
 @media (min-width: 768px) {
-  .about__title,
-  .devices__title {
+  .about__title, .about__title font,
+  .devices__title,
+  .devices__title font {
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 30px;
   }
 }
 @media (min-width: 1200px) {
-  .about__title,
-  .devices__title {
+  .about__title, .about__title font,
+  .devices__title,
+  .devices__title font {
     text-align: left;
   }
 }
-.about__text p,
+.about__text p, .about__text p font,
 .about__text ul,
 .devices__text p,
+.devices__text p font,
 .devices__text ul {
   font-size: 14px;
   line-height: 1.5em;
   color: white;
 }
 @media (min-width: 768px) {
-  .about__text p,
+  .about__text p, .about__text p font,
   .about__text ul,
   .devices__text p,
+  .devices__text p font,
   .devices__text ul {
     font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
-  .about__text p,
+  .about__text p, .about__text p font,
   .about__text ul,
   .devices__text p,
+  .devices__text p font,
   .devices__text ul {
     font-size: 20px;
     line-height: 1em;
   }
 }
-.about__text p,
-.devices__text p {
+.about__text p, .about__text p font,
+.devices__text p,
+.devices__text p font {
   margin-bottom: 1em;
 }
-.about__text p:last-child,
-.devices__text p:last-child {
+.about__text p:last-child, .about__text p font:last-child,
+.devices__text p:last-child,
+.devices__text p font:last-child {
   margin-bottom: 0;
 }
 .about__text ul,
@@ -694,7 +702,7 @@ section {
   }
 }
 @media (min-width: 1200px) {
-  .devices__title {
+  .devices__title, .devices__title font {
     width: 550px;
   }
 }
@@ -772,7 +780,7 @@ section {
     padding: 0 50px;
   }
 }
-.faqs__title {
+.faqs__title, .faqs__title font {
   font-family: "Big Shoulders Display", sans-serif;
   color: white;
   font-size: 40px;
