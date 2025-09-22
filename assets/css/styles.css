@@ -94,6 +94,33 @@ main {
   overflow: hidden;
 }
 
+.scroll-arrow {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+.scroll-arrow svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
 .header {
   position: absolute;
   z-index: 999;
@@ -336,6 +363,7 @@ section {
 .piani {
   position: relative;
   z-index: 9;
+  margin-top: 100px;
 }
 .piani__container {
   width: 1440px;
